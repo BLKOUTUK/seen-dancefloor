@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Seen / Scene — The Dancefloor · Boiler Room Broadcast Lab #14</title>
+<meta name="description" content="An ensemble chat show about the Black queer dancefloor. Mood board for Boiler Room Broadcast Lab #14 — staged at Global Black Pride, Paris, September 2026." />
+<meta property="og:title" content="Seen / Scene — The Dancefloor" />
+<meta property="og:description" content="An ensemble chat show about the Black queer dancefloor. Mood board for Boiler Room Broadcast Lab #14." />
+<meta property="og:image" content="assets/crate-3.jpg" />
+<meta name="theme-color" content="#0b0b0c" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500;700;900&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --obsidian:#0b0b0c;
+    --panel:#141416;
+    --cream:#f3ede1;
+    --muted:#9d998f;
+    --green:#39d98a;
+    --rule:rgba(243,237,225,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--obsidian);
+    color:var(--cream);
+    font-family:'Work Sans',system-ui,sans-serif;
+    font-weight:500;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  /* film grain */
+  body::after{
+    content:"";position:fixed;inset:0;z-index:9000;pointer-events:none;opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  ::selection{background:var(--green);color:var(--obsidian)}
+  a{color:inherit}
+  a:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+  .mono{font-family:'IBM Plex Mono',monospace;font-weight:400}
+  .ital{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:400}
+
+  .kicker{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--muted);
+  }
+  .kicker .num{color:var(--green)}
+
+  h1,h2,h3{font-weight:900;text-transform:uppercase;line-height:.96;letter-spacing:-.01em}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;
+    justify-content:space-between;overflow:hidden}
+  .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    filter:grayscale(.35) contrast(1.05) brightness(.62)}
+  .hero::before{content:"";position:absolute;inset:0;z-index:1;
+    background:linear-gradient(180deg,rgba(11,11,12,.55) 0%,rgba(11,11,12,.25) 38%,rgba(11,11,12,.92) 100%)}
+  .hero-top,.hero-mid,.hero-bot{position:relative;z-index:2}
+  .hero-top{padding-top:34px}
+  .hero-top .wrap{display:flex;justify-content:space-between;align-items:center;
+    flex-wrap:wrap;gap:14px}
+  .chip{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.16em;
+    text-transform:uppercase;border:1px solid var(--rule);padding:8px 13px;
+    color:var(--cream);background:rgba(11,11,12,.4);backdrop-filter:blur(4px)}
+  .chip.accent{border-color:var(--green);color:var(--green)}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .brand img{width:46px;height:46px;display:block}
+  .brand span{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--cream)}
+  .hero-mid{flex:1;display:flex;align-items:center;padding:48px 0}
+  .hero-mid h1{
+    font-size:clamp(56px,13.5vw,184px);
+    letter-spacing:-.025em;
+  }
+  .hero-mid h1 .slash{color:var(--green);font-weight:700}
+  .edition{margin-top:22px;display:flex;align-items:baseline;gap:18px;flex-wrap:wrap}
+  .edition .big{font-size:clamp(26px,5.4vw,58px);font-weight:900;text-transform:uppercase;
+    letter-spacing:-.01em}
+  .hero-sub{margin-top:20px;max-width:25ch;font-size:clamp(19px,2.6vw,27px);
+    color:var(--cream);line-height:1.34;
+    font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:400}
+  .hero-bot{padding-bottom:30px}
+  .hero-bot .wrap{display:flex;justify-content:space-between;align-items:flex-end;
+    gap:18px;flex-wrap:wrap}
+  .scrollcue{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:10px}
+  .scrollcue .bar{width:46px;height:1px;background:var(--green);display:inline-block;
+    animation:slide 2.4s ease-in-out infinite}
+  @keyframes slide{0%,100%{transform:scaleX(.3);transform-origin:left}50%{transform:scaleX(1);transform-origin:left}}
+
+  /* ---------- SECTION SHELL ---------- */
+  section{padding:clamp(64px,9vw,128px) 0;border-top:1px solid var(--rule)}
+  .sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:42px}
+  .sec-head .line{flex:1;height:1px;background:var(--rule)}
+
+  /* ---------- PITCH ---------- */
+  .pitch p{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:400;
+    font-size:clamp(26px,4.4vw,52px);line-height:1.24;letter-spacing:-.01em;
+    max-width:20ch}
+  .pitch p .hl{font-style:normal;font-family:'Work Sans';font-weight:900;
+    text-transform:uppercase;border-bottom:3px solid var(--green);padding-bottom:1px}
+  .pitch .meta{margin-top:38px;display:flex;gap:34px;flex-wrap:wrap;
+    padding-top:24px;border-top:1px solid var(--rule)}
+  .pitch .meta div{min-width:150px}
+  .pitch .meta .k{font-family:'IBM Plex Mono',monospace;font-size:11px;
+    letter-spacing:.15em;text-transform:uppercase;color:var(--green);margin-bottom:6px}
+  .pitch .meta .v{font-size:16px;font-weight:700}
+
+  /* ---------- THE FORM / tenets ---------- */
+  .form-lead{font-size:clamp(20px,3vw,30px);font-weight:700;line-height:1.32;
+    max-width:24ch;text-transform:uppercase;letter-spacing:-.005em}
+  .form-lead em{font-family:'Fraunces',serif;font-style:italic;font-weight:400;
+    text-transform:none;color:var(--green)}
+  .tenets{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px;
+    border:1px solid var(--rule)}
+  .tenet{padding:28px 24px;border-right:1px solid var(--rule)}
+  .tenet:last-child{border-right:none}
+  .tenet .tn{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--green);
+    margin-bottom:18px}
+  .tenet h3{font-size:19px;margin-bottom:10px;line-height:1.05}
+  .tenet p{font-size:14px;color:var(--muted);line-height:1.5;font-weight:500}
+
+  /* ---------- form footnote ---------- */
+  .form-foot{margin-top:30px;padding-top:22px;border-top:1px solid var(--rule);
+    font-family:'IBM Plex Mono',monospace;font-size:13px;line-height:1.62;
+    color:var(--muted);max-width:58ch}
+  .form-foot .fn{color:var(--green);text-transform:uppercase;letter-spacing:.14em;
+    margin-right:8px}
+
+  /* ---------- light/shade arc ---------- */
+  .arc{margin-top:56px}
+  .arc-cap{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.15em;
+    text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+  .arc svg{width:100%;height:auto;display:block}
+  .arc-labels{display:flex;justify-content:space-between;margin-top:12px}
+  .arc-labels span{font-family:'IBM Plex Mono',monospace;font-size:11px;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--cream);flex:1}
+  .arc-labels span:nth-child(2),.arc-labels span:nth-child(3){text-align:center}
+  .arc-labels span:last-child{text-align:right;color:var(--green)}
+
+  /* ---------- the room / full-bleed staging ---------- */
+  .room{position:relative;border-top:1px solid var(--rule)}
+  .room img{display:block;width:100%;height:62vh;min-height:340px;object-fit:cover;
+    filter:grayscale(.12) contrast(1.04) brightness(.82)}
+  .room .cap{position:absolute;left:0;right:0;bottom:0;
+    background:linear-gradient(0deg,rgba(11,11,12,.94) 0%,rgba(11,11,12,0) 100%);
+    padding:72px 0 32px}
+  .room .cap .kicker{margin-bottom:10px;display:block}
+  .room .cap p{font-family:'Fraunces',serif;font-style:italic;
+    font-size:clamp(18px,2.6vw,28px);line-height:1.34;max-width:32ch;color:var(--cream)}
+
+  /* ---------- THE CRATE / sleeves ---------- */
+  .note{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(19px,2.6vw,30px);
+    color:var(--cream);max-width:30ch;margin-bottom:16px;line-height:1.26}
+  .note-sub{font-size:16px;line-height:1.62;color:var(--muted);max-width:60ch;
+    margin-bottom:46px;font-weight:500}
+  .note-sub b{font-family:'Work Sans';font-weight:900;text-transform:uppercase;
+    color:var(--green);letter-spacing:.01em}
+  .crate{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .sleeve{position:relative;display:block;overflow:hidden;background:var(--panel);
+    border:1px solid var(--rule)}
+  .sleeve .img{aspect-ratio:16/9;overflow:hidden}
+  .sleeve img{width:100%;height:100%;object-fit:cover;display:block;
+    filter:grayscale(.12) contrast(1.04);transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+  .sleeve:hover img{transform:scale(1.045)}
+  .sleeve .meta{padding:20px 22px 24px;position:relative}
+  .sleeve .row{display:flex;justify-content:space-between;align-items:baseline;
+    font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--muted)}
+  .sleeve .tag{color:var(--obsidian);background:var(--green);padding:3px 8px;
+    font-weight:500}
+  .sleeve h3{font-size:22px;margin:13px 0 9px;line-height:1.04}
+  .sleeve p{font-size:14.5px;color:var(--muted);line-height:1.52;font-weight:500;
+    font-family:'Fraunces',serif;font-style:italic}
+  .sleeve .underline{position:absolute;left:22px;bottom:0;height:3px;width:0;
+    background:var(--green);transition:width .5s cubic-bezier(.2,.7,.2,1)}
+  .sleeve:hover .underline{width:46px}
+
+  /* ---------- REFERENCES ---------- */
+  .refs{display:grid;grid-template-columns:repeat(2,1fr);gap:42px 56px}
+  .refgrp .rk{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--green);padding-bottom:10px;
+    border-bottom:1px solid var(--rule);margin-bottom:14px}
+  .refgrp .rv{font-size:16px;line-height:1.7;font-weight:500}
+  .refgrp .rv .sep{color:var(--muted);margin:0 4px}
+
+  /* ---------- the invitation ---------- */
+  .invite-lead{font-size:clamp(30px,6.4vw,72px);font-weight:900;text-transform:uppercase;
+    line-height:1;letter-spacing:-.02em}
+  .invite-lead em{font-family:'Fraunces',serif;font-style:italic;font-weight:400;
+    text-transform:none;color:var(--green)}
+  .invite-body{margin-top:26px;max-width:48ch;font-size:clamp(16px,2vw,19px);
+    line-height:1.62;color:var(--cream);font-weight:500}
+
+  /* ---------- FOOTER ---------- */
+  footer{border-top:1px solid var(--rule);padding:clamp(56px,8vw,96px) 0 48px}
+  .fbrand{display:flex;align-items:center;gap:16px;text-decoration:none;
+    margin-bottom:34px;padding-bottom:30px;border-bottom:1px solid var(--rule)}
+  .fbrand img{width:58px;height:58px;display:block}
+  .fbrand span{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.05em;
+    color:var(--muted)}
+  .fbrand b{color:var(--cream);font-weight:500}
+  .fmark{font-size:clamp(40px,9vw,108px);font-weight:900;text-transform:uppercase;
+    letter-spacing:-.025em;line-height:.92}
+  .fmark .slash{color:var(--green);font-weight:700}
+  .ftag{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(18px,2.6vw,26px);
+    color:var(--cream);margin-top:18px}
+  .fgrid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;
+    margin-top:48px;padding-top:26px;border-top:1px solid var(--rule)}
+  .fgrid div{font-family:'IBM Plex Mono',monospace;font-size:12.5px;line-height:1.7;
+    color:var(--muted)}
+  .fgrid .fk{color:var(--green);letter-spacing:.12em;text-transform:uppercase;
+    font-size:11px;margin-bottom:5px}
+  .fgrid a{color:var(--cream);text-decoration:none;border-bottom:1px solid var(--green)}
+
+  /* ---------- reveal ---------- */
+  .reveal{opacity:0;transform:translateY(28px);
+    transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    .scrollcue .bar{animation:none}
+  }
+
+  /* ---------- responsive ---------- */
+  @media(max-width:880px){
+    .tenets{grid-template-columns:repeat(2,1fr)}
+    .tenet:nth-child(2){border-right:none}
+    .tenet:nth-child(1),.tenet:nth-child(2){border-bottom:1px solid var(--rule)}
+    .refs{grid-template-columns:1fr;gap:34px}
+  }
+  @media(max-width:560px){
+    .wrap{padding:0 20px}
+    .crate{grid-template-columns:1fr}
+    .tenets{grid-template-columns:1fr}
+    .tenet{border-right:none;border-bottom:1px solid var(--rule)}
+    .tenet:last-child{border-bottom:none}
+    .pitch .meta{gap:22px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <video autoplay muted loop playsinline poster="assets/mood-poster.jpg">
+    <source src="assets/mood.mp4" type="video/mp4" />
+  </video>
+
+  <div class="hero-top">
+    <div class="wrap">
+      <a class="brand" href="https://blkoutuk.com">
+        <img src="assets/blkout-logo.png" alt="BLKOUT" />
+        <span>a BLKOUT programme</span>
+      </a>
+      <span class="chip accent">Boiler Room Broadcast Lab #14 · mood board</span>
+    </div>
+  </div>
+
+  <div class="hero-mid">
+    <div class="wrap">
+      <h1>Seen <span class="slash">/</span> Scene</h1>
+      <div class="edition">
+        <span class="kicker"><span class="num">edition</span> — the theme</span>
+        <span class="big">The Dancefloor</span>
+      </div>
+      <p class="hero-sub">An ensemble chat show about the Black queer dancefloor — its music, its history, and everything it has held.</p>
+    </div>
+  </div>
+
+  <div class="hero-bot">
+    <div class="wrap">
+      <span class="scrollcue"><span class="bar"></span> scroll — the night, sleeve by sleeve</span>
+      <span class="chip">Global Black Pride · Paris · Sept 2026</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ 01 · THE PITCH ============ -->
+<section class="pitch">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker"><span class="num">01</span> — what it is</span>
+      <span class="line"></span>
+    </div>
+    <p class="reveal">A two-hour live broadcast: an <span class="hl">ensemble chat show</span> about the Black queer dancefloor — its music, its history, what it has meant in Black queer life across the diaspora.</p>
+    <div class="meta reveal">
+      <div><div class="k">Form</div><div class="v">Live chat show + audience</div></div>
+      <div><div class="k">Staged at</div><div class="v">Global Black Pride, Paris</div></div>
+      <div><div class="k">When</div><div class="v">September 2026</div></div>
+      <div><div class="k">By</div><div class="v">BLKOUT Creative Ltd · a CBS</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 · THE FORM ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker"><span class="num">02</span> — the form</span>
+      <span class="line"></span>
+    </div>
+    <p class="form-lead reveal">Nobody leaves the stage. The night is a <em>conversation</em> — and the performances grow out of it.</p>
+
+    <div class="tenets reveal">
+      <div class="tenet">
+        <div class="tn">/ 01</div>
+        <h3>Guests stay</h3>
+        <p>Our guests are on stage the whole evening — not a turn and a goodbye. Chat, stories, memory, disagreement.</p>
+      </div>
+      <div class="tenet">
+        <div class="tn">/ 02</div>
+        <h3>Two hosts, paired</h3>
+        <p>The deskbound geek — the stats, the cultural-memory depth — paired with a younger, fresher voice. Depth and energy, holding the thread between them.</p>
+      </div>
+      <div class="tenet">
+        <div class="tn">/ 03</div>
+        <h3>Segments surface</h3>
+        <p>A performance, a teaching moment, a debate, a reading — each grows out of the talk, not scheduled against it.</p>
+      </div>
+      <div class="tenet">
+        <div class="tn">/ 04</div>
+        <h3>It ends as a floor</h3>
+        <p>The conversation is the spine. The closing set turns the broadcast into a dancefloor.</p>
+      </div>
+    </div>
+
+    <p class="form-foot reveal"><span class="fn">casting</span> The younger host is cast through an open audition — a way in for new voices, and the search itself runs as the campaign: hype that builds the audience before the broadcast.</p>
+
+    <div class="arc reveal">
+      <div class="arc-cap">— light &amp; shade · the shape of the evening</div>
+      <svg viewBox="0 0 1000 130" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,78 C140,30 220,34 320,60 C400,82 440,118 540,112 C640,106 700,52 800,46 C880,41 940,20 1000,8"
+              fill="none" stroke="#39d98a" stroke-width="2.5"/>
+        <circle cx="60" cy="62" r="5" fill="#39d98a"/>
+        <circle cx="540" cy="112" r="5" fill="#f3ede1"/>
+        <circle cx="800" cy="46" r="5" fill="#39d98a"/>
+        <circle cx="980" cy="11" r="5" fill="#39d98a"/>
+      </svg>
+      <div class="arc-labels">
+        <span>Lift — open</span>
+        <span>Hold the difficult</span>
+        <span>Lift again</span>
+        <span>Open the floor</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ full-bleed · the staging ============ -->
+<div class="room reveal">
+  <img src="assets/the-room.jpg" alt="A warm, lamp-lit record shop interior — wood panelling, crates of vinyl, a turntable, framed prints, and a Black host behind the counter" loading="lazy" />
+  <div class="cap">
+    <div class="wrap">
+      <span class="kicker"><span class="num">the staging</span> — the room the night is held in</span>
+      <p>Not a club, not a stage to be performed at — a warm room lined with records, a host at the counter, the guests gathered round. You are welcomed in.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 03 · THE CRATE ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker"><span class="num">03</span> — the crate · eight records</span>
+      <span class="line"></span>
+    </div>
+    <p class="note reveal">The crate sets the agenda — eight records, the spine of the night.</p>
+    <p class="note-sub reveal">Artists are invited to respond to any or all of it. The core audience comes informed, having seen the crate already. The two hosts guide the night through it — conversation and audience segments, built from the crate's topics. <b>Options, not a running order.</b></p>
+
+    <div class="crate">
+      <article class="sleeve reveal">
+        <div class="img"><img src="assets/crate-1.jpg" alt="A record sleeve of joyful disco-era Black women, lifted from the crate" loading="lazy" /></div>
+        <div class="meta">
+          <div class="row"><span>01</span><span class="tag">Joyful</span></div>
+          <h3>The Floor Opens</h3>
+          <p>Disco, soul, the floor at full celebration. The night lifts off here.</p>
+          <span class="underline"></span>
+        </div>
+      </article>
+
+      <article class="sleeve reveal">
+        <div class="img"><img src="assets/crate-2.jpg" alt="The Brian Green footwork record sleeve" loading="lazy" /></div>
+        <div class="meta">
+          <div class="row"><span>02</span><span class="tag">Peak</span></div>
+          <h3>Brian Green</h3>
+          <p>The footwork sleeve. A dancer walks the room through the basics — house, footwork, the steps that built the night.</p>
+          <span class="underline"></span>
+        </div>
+      </article>
+
+      <article class="sleeve reveal">
+        <div class="img"><img src="assets/crate-3.jpg" alt="The Lil Nas X versus Little Richard record sleeve" loading="lazy" /></div>
+        <div class="meta">
+          <div class="row"><span>03</span><span class="tag">Light</span></div>
+          <h3>Lil Nas X / Little Richard</h3>
+          <p>The Versus sleeve. A comedy debate with a real argument inside it — who owns the lineage, who got paid.</p>
+          <span class="underline"></span>
+        </div>
+      </article>
+
+      <article class="sleeve reveal">
+        <div class="img"><img src="assets/crate-4.jpg" alt="The Tongues Untied record sleeve, after Marlon Riggs" loading="lazy" /></div>
+        <div class="meta">
+          <div class="row"><span>04</span><span class="tag">Depth</span></div>
+          <h3>Tongues Untied</h3>
+          <p>After Marlon Riggs, 1989. His words on anger — unvented, becoming — given a body and a voice. The temperature drops, on purpose.</p>
+          <span class="underline"></span>
+        </div>
+      </article>
+
+      <article class="sleeve reveal">
+        <div class="img"><img src="assets/crate-5.jpg" alt="The Looking for Langston record sleeve, after Isaac Julien" loading="lazy" /></div>
+        <div class="meta">
+          <div class="row"><span>05</span><span class="tag">Tender</span></div>
+          <h3>Looking for Langston</h3>
+          <p>After Isaac Julien, 1989. One voice and a guitar over Julien's images. The room goes quiet for Langston.</p>
+          <span class="underline"></span>
+        </div>
+      </article>
+
+      <article class="sleeve reveal">
+        <div class="img"><img src="assets/crate-6.jpg" alt="The Les Ballets Negres record sleeve, 1946" loading="lazy" /></div>
+        <div class="meta">
+          <div class="row"><span>06</span><span class="tag">Breath</span></div>
+          <h3>Les Ballets Nègres</h3>
+          <p>Berto Pasuka's company, 1946. The quiz — eighty years of Black dance, Pasuka to a TikTok step from this week.</p>
+          <span class="underline"></span>
+        </div>
+      </article>
+
+      <article class="sleeve reveal">
+        <div class="img"><img src="assets/crate-7.jpg" alt="The Is Dancehall Ready record sleeve" loading="lazy" /></div>
+        <div class="meta">
+          <div class="row"><span>07</span><span class="tag">Turn</span></div>
+          <h3>Is Dancehall Ready?</h3>
+          <p>Dancehall reclaimed. A music weaponised against queer life, taken back and danced on queer terms — live.</p>
+          <span class="underline"></span>
+        </div>
+      </article>
+
+      <article class="sleeve reveal">
+        <div class="img"><img src="assets/crate-8.jpg" alt="The Larry Levan Paradise Garage record sleeve" loading="lazy" /></div>
+        <div class="meta">
+          <div class="row"><span>08</span><span class="tag">Close</span></div>
+          <h3>Paradise Garage</h3>
+          <p>Larry Levan's floor. The closing set — disco, house, the lineage to now. The broadcast becomes a dancefloor.</p>
+          <span class="underline"></span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 · REFERENCES ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker"><span class="num">04</span> — references · the visual world</span>
+      <span class="line"></span>
+    </div>
+    <div class="refs">
+      <div class="refgrp reveal">
+        <div class="rk">Garment &amp; graphic</div>
+        <div class="rv">Wales Bonner <span class="sep">·</span> Telfar <span class="sep">·</span> Martine Rose <span class="sep">·</span> Mowalola <span class="sep">·</span> Bianca Saunders <span class="sep">·</span> Skepta record art</div>
+      </div>
+      <div class="refgrp reveal">
+        <div class="rk">Photography</div>
+        <div class="rv">Tyler Mitchell <span class="sep">·</span> Liz Johnson Artur <span class="sep">·</span> Adama Jalloh <span class="sep">·</span> Joshua Woods — shot like a lookbook, film grain visible</div>
+      </div>
+      <div class="refgrp reveal">
+        <div class="rk">Cultural lineage</div>
+        <div class="rv">rukus! Black LGBT Archive <span class="sep">·</span> Black &amp; Gay Back in the Day <span class="sep">·</span> the reggae specialist record shop</div>
+      </div>
+      <div class="refgrp reveal">
+        <div class="rk">Broadcast form</div>
+        <div class="rv">Tiny Desk <span class="sep">·</span> The Word <span class="sep">·</span> Network 7 — intimate live performance, anarchic youth TV, the restless magazine cut</div>
+      </div>
+      <div class="refgrp reveal">
+        <div class="rk">Curation form</div>
+        <div class="rv">Desert Island Discs <span class="sep">·</span> Book Slam <span class="sep">·</span> the flâneur <span class="sep">·</span> B/D® JAMS</div>
+      </div>
+      <div class="refgrp reveal">
+        <div class="rk">Palette</div>
+        <div class="rv">Obsidian <span class="sep">+</span> cream <span class="sep">+</span> one bold green — used sparingly, with weight</div>
+      </div>
+      <div class="refgrp reveal">
+        <div class="rk">Type</div>
+        <div class="rv">Work Sans 900 <span class="sep">·</span> Fraunces italic <span class="sep">·</span> IBM Plex Mono — the apparel graphic, the editorial voice, the spec sheet</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 · THE INVITATION ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker"><span class="num">05</span> — the invitation</span>
+      <span class="line"></span>
+    </div>
+    <p class="invite-lead reveal">We want to make<br/>this <em>with you</em>.</p>
+    <p class="invite-body reveal">An ensemble chat show about the Black queer dancefloor — staged and broadcast from Global Black Pride in Paris, September 2026. A Boiler Room Broadcast Lab #14 commission makes it real. The cultural work would get two homes: Boiler Room's distribution, and Seen/Scene's community-owned archive — not one ephemeral stream.</p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <a class="fbrand reveal" href="https://blkoutuk.com">
+      <img src="assets/blkout-logo.png" alt="BLKOUT" />
+      <span>Seen / Scene is a programme of <b>BLKOUT UK</b></span>
+    </a>
+    <div class="fmark reveal">Seen <span class="slash">/</span> Scene</div>
+    <div class="ftag reveal">a fortnightly room. ten + one. for the culture.</div>
+    <div class="fgrid">
+      <div><div class="fk">Programme</div>Seen / Scene — Black queer<br/>British cultural curation</div>
+      <div><div class="fk">Held by</div>BLKOUT UK<br/>BLKOUT Creative Ltd, a CBS</div>
+      <div><div class="fk">Edition</div>The Dancefloor — for<br/>Boiler Room Broadcast Lab #14</div>
+      <div><div class="fk">Contact</div><a href="mailto:rob@blkoutuk.com">rob@blkoutuk.com</a><br/><a href="https://blkoutuk.com">blkoutuk.com</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach((el,i)=>{
+    el.style.transitionDelay = (Math.min(i%4,3)*0.07)+'s';
+    io.observe(el);
+  });
+</script>
+</body>
+</html>
