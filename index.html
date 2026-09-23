@@ -180,6 +180,31 @@
     background:var(--green);transition:width .5s cubic-bezier(.2,.7,.2,1)}
   .sleeve:hover .underline{width:46px}
 
+  /* ---------- THEMES ---------- */
+  .themes-grid{display:flex;flex-wrap:wrap;gap:0;margin-top:36px;border:1px solid var(--rule)}
+  .theme-card{flex:1 1 260px;padding:24px 24px 26px;border-right:1px solid var(--rule);
+    border-bottom:1px solid var(--rule)}
+  .theme-card .tn{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--green);
+    margin-bottom:14px}
+  .theme-card h3{font-size:18px;margin-bottom:8px;line-height:1.08;text-transform:none}
+  .theme-card p{font-size:14px;color:var(--muted);line-height:1.5;font-weight:500}
+  .ask-box{margin-top:32px;padding-top:26px;border-top:1px solid var(--rule);
+    display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:14px}
+  .ask-box p{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(18px,2.4vw,24px);
+    color:var(--cream);max-width:42ch}
+  .ask-box a{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--obsidian);background:var(--green);
+    padding:12px 20px;text-decoration:none;white-space:nowrap}
+  .stimuli-cap{margin-top:30px}
+  .stimuli{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:10px 36px;
+    padding:26px 28px;border:1px solid var(--rule)}
+  .stimuli li{list-style:none;display:flex;gap:12px;font-size:14.5px;line-height:1.5;
+    color:var(--cream);font-weight:500}
+  .stimuli li .si{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--green);
+    flex-shrink:0;padding-top:2px}
+  .stimuli li.t11{grid-column:1/-1;padding-top:14px;margin-top:6px;border-top:1px solid var(--rule)}
+  .stimuli li.t11 .si{color:var(--cream)}
+
   /* ---------- REFERENCES ---------- */
   .refs{display:grid;grid-template-columns:repeat(2,1fr);gap:42px 56px}
   .refgrp .rk{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.14em;
@@ -240,6 +265,8 @@
     .tenet{border-right:none;border-bottom:1px solid var(--rule)}
     .tenet:last-child{border-bottom:none}
     .pitch .meta{gap:22px}
+    .theme-card{border-right:none}
+    .stimuli{grid-template-columns:1fr}
   }
 </style>
 </head>
@@ -362,11 +389,71 @@
   </div>
 </div>
 
-<!-- ============ 03 · THE CRATE ============ -->
+<!-- ============ 03 · THEMES ============ -->
 <section>
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="kicker"><span class="num">03</span> — a room, worked · The Dancefloor</span>
+      <span class="kicker"><span class="num">03</span> — the theme, first</span>
+      <span class="line"></span>
+    </div>
+    <p class="note reveal">"The Dancefloor," below, is a theme — one of eighteen a year, not the show itself.</p>
+    <p class="note-sub reveal">Every room, playlist and Responsive edition starts here: a theme worth ten stimuli and one original piece. Five more, to show the range:</p>
+
+    <div class="themes-grid reveal">
+      <div class="theme-card">
+        <div class="tn">01</div>
+        <h3>Lesbian Visibility Week</h3>
+        <p>Ten films — the ones that held a room before the calendar caught up.</p>
+      </div>
+      <div class="theme-card">
+        <div class="tn">02</div>
+        <h3>What Hands Hold</h3>
+        <p>Ten poems — protest, prayer, tenderness, work. What a hand is for.</p>
+      </div>
+      <div class="theme-card">
+        <div class="tn">03</div>
+        <h3>The Price of the Ticket</h3>
+        <p>Ten Baldwin clips — what it costs to arrive here at all.</p>
+      </div>
+      <div class="theme-card">
+        <div class="tn">04</div>
+        <h3>The Ballroom Archive</h3>
+        <p>Ten moments from the YouTube archive nobody's writing about anymore.</p>
+      </div>
+      <div class="theme-card">
+        <div class="tn">05</div>
+        <h3>World AIDS Day</h3>
+        <p>A commemoration edition, 1 December — close to home for this community's own history.</p>
+      </div>
+    </div>
+
+    <p class="arc-cap stimuli-cap reveal">— one theme, sketched · The Ballroom Archive, indicative not cleared</p>
+    <ul class="stimuli reveal">
+      <li><span class="si">01</span> A category walk — Best Dressed, 1989 New York</li>
+      <li><span class="si">02</span> Paris Is Burning's "reading" scene — the read as its own artform</li>
+      <li><span class="si">03</span> Crystal LaBeija's founding-mother speech, Harlem</li>
+      <li><span class="si">04</span> A UK house's Vogue Fem category, London, this decade</li>
+      <li><span class="si">05</span> MikeQ, a ballroom-house crossover beat</li>
+      <li><span class="si">06</span> A "realness" walk, and what it asks of the room</li>
+      <li><span class="si">07</span> Willi Ninja teaching the basics, on camera</li>
+      <li><span class="si">08</span> A UK kiki scene clip — the community that built it</li>
+      <li><span class="si">09</span> A commentator's call — the words that carry a category</li>
+      <li><span class="si">10</span> A house family portrait — mother, father, children, the structure of care</li>
+      <li class="t11"><span class="si">Track 11</span> The curator's own — what it felt like to assemble this set.</li>
+    </ul>
+
+    <div class="ask-box reveal">
+      <p>Got a theme? Responsive editions exist because we won't think of everything.</p>
+      <a href="mailto:rob@blkoutuk.com?subject=Theme%20suggestion%20for%20Seen%2FScene">send it over</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 · THE CRATE ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker"><span class="num">04</span> — a room, worked · The Dancefloor</span>
       <span class="line"></span>
     </div>
     <p class="note reveal">One theme, worked in full — one room among eighteen a year.</p>
@@ -460,7 +547,7 @@
 <section>
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="kicker"><span class="num">04</span> — references · the visual world</span>
+      <span class="kicker"><span class="num">05</span> — references · the visual world</span>
       <span class="line"></span>
     </div>
     <div class="refs">
@@ -500,7 +587,7 @@
 <section>
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="kicker"><span class="num">05</span> — the invitation</span>
+      <span class="kicker"><span class="num">06</span> — the invitation</span>
       <span class="line"></span>
     </div>
     <p class="invite-lead reveal">We want to make<br/>this <em>with you</em>.</p>
